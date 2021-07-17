@@ -13,7 +13,7 @@
         }
 
         .centered {
-            width: 65%;
+            width: 350px;
             margin-left: auto;
             margin-right: auto;
             background-color: #222;
@@ -100,36 +100,228 @@
         font-size: 110% !important;
         font-weight: bold; }
 
+        .div-row {
+        width: 100%;
+        display: inline-block;
+        line-height: 20px;
+        padding: 3px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+        .div-row .div-col-quarter {
+            width: calc(2.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-half {
+            width: calc(5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-three-quarters {
+            width: calc(7.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-01 {
+            width: calc(10% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0125 {
+            width: calc(12.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-015 {
+            width: calc(15% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0175 {
+            width: calc(17.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-02 {
+            width: calc(20% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0225 {
+            width: calc(22.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-025 {
+            width: calc(25% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0275 {
+            width: calc(27.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-03 {
+            width: calc(30% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0325 {
+            width: calc(32.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-035 {
+            width: calc(35% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0375 {
+            width: calc(37.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-04 {
+            width: calc(40% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0425 {
+            width: calc(42.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-045 {
+            width: calc(45% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0475 {
+            width: calc(47.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-05 {
+            width: calc(50% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0525 {
+            width: calc(52.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-055 {
+            width: calc(55% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0575 {
+            width: calc(57.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-06 {
+            width: calc(60% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0625 {
+            width: calc(62.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-065 {
+            width: calc(65% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0675 {
+            width: calc(67.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-07 {
+            width: calc(70% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0725 {
+            width: calc(72.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-075 {
+            width: calc(75% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0775 {
+            width: calc(77.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-08 {
+            width: calc(80% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0825 {
+            width: calc(82.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-085 {
+            width: calc(85% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0875 {
+            width: calc(87.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-09 {
+            width: calc(90% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0925 {
+            width: calc(92.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-095 {
+            width: calc(95% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-0975 {
+            width: calc(97.5% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-10 {
+            width: calc(100% - 6px);
+            float: left;
+            padding: 3px; }
+        .div-row .div-col-auto {
+            width: auto;
+            float: left;
+            padding: 3px; }
+
+        .float-right {
+        float: right; }
+
     </style>
 </head>
 <body bgcolor="silver">
     <form method="post" action="login.jsp">
         <div class="container">
             <div class="centered">
-                <table border="0" width="30%" cellpadding="3">
-                    <thead>
-                        <tr>
-                            <th colspan="2">Login Page</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Username</td>
-                            <td><input class="frm-ctl-elemt" type="text" name="userName" value="" /></td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input class="frm-ctl-elemt" type="password" name="password" value="" /></td>
-                        </tr>
-                        <tr>
-                            <td><input class="btn btn-somber btn-small" type="submit" value="Login" /></td>
-                            <td><input class="btn btn-crisp btn-small" type="reset" value="Reset" /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">New User <a href="#" title="This Does Not Actually Work">Register Here</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="div-row">
+                    <div class="div-col-10">
+                        <div class="div-row">
+                            <div class="div-col-10">
+                                Login Page
+                            </div>
+                        </div>
+                        <div class="div-row">
+                            <div class="div-col-01">&nbsp;</div>
+                            <div class="div-col-08">
+                                <label for="userName">Username:</label>
+                                <input class="frm-ctl-elemt" type="text" name="userName" value="" />
+                            </div>
+                            <div class="div-col-01">&nbsp;</div>
+                        </div>
+                        <div class="div-row">
+                            <div class="div-col-01">&nbsp;</div>
+                            <div class="div-col-08">
+                                <label for="password">Password:</label>
+                                <input class="frm-ctl-elemt" type="password" name="password" value="" />
+                            </div>
+                            <div class="div-col-01">&nbsp;</div>
+                        </div>
+                        <div class="div-row">
+                            <div class="div-col-01">&nbsp;</div>
+                            <div class="div-col-08">
+                                <input class="btn btn-somber btn-small float-right" type="submit" value="Login" />
+                                <input class="btn btn-crisp btn-small float-right" type="reset" value="Reset" />
+                            </div>
+                            <div class="div-col-01">&nbsp;</div>
+                        </div>
+                        <div class="div-row">
+                            <div class="div-col-10">
+                                <span class="float-right">
+                                    New User <a href="#" title="This Does Not Actually Work">Register Here</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </form>
