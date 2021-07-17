@@ -18,6 +18,7 @@
             margin-right: auto;
             background-color: #222;
             color: #fff;
+            padding-top: 100px;
         }
 
         .frm-ctl-elemt {
@@ -279,14 +280,14 @@
     </style>
 </head>
 <body bgcolor="silver">
-    <form method="post" action="login.jsp">
+    <form method="post" action="index.jsp">
         <div class="container">
             <div class="centered">
                 <div class="div-row">
                     <div class="div-col-10">
                         <div class="div-row">
                             <div class="div-col-10">
-                                Login Page
+                                CalTech - CM Project-01 Login Page
                             </div>
                         </div>
                         <div class="div-row">
