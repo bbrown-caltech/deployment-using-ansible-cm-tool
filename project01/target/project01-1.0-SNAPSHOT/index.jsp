@@ -10,6 +10,7 @@
         }
         .container {
             width: 100%;
+            padding-top: 250px;
         }
 
         .centered {
@@ -18,7 +19,6 @@
             margin-right: auto;
             background-color: #222;
             color: #fff;
-            padding-top: 100px;
         }
 
         .frm-ctl-elemt {
@@ -287,7 +287,7 @@
                     <div class="div-col-10">
                         <div class="div-row">
                             <div class="div-col-10">
-                                CalTech - CM Project-01 Login Page
+                                CM Project01 -- Login Page
                             </div>
                         </div>
                         <div class="div-row">
