@@ -1,0 +1,8 @@
+[webservers]
+tomcat ansible_user=caltech ansible_ssh_pass=caltech
+
+
+[webservers:vars]
+project=project01
+url=https://github.com/bbrown-caltech/deployment-using-ansible-cm-tool/raw/project01-maven-web-application/project01/target/project01-1.0-SNAPSHOT.war
+
