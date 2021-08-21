@@ -110,6 +110,7 @@
   <distributionManagement>
     <snapshotRepository>
       <id>nexus-snapshots</id>
+      <uniqueVersion>false</uniqueVersion>
       <url>${nexus.snapshots.url}</url>
     </snapshotRepository>
     <repository>
