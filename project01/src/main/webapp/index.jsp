@@ -287,7 +287,6 @@
                     <div class="div-col-10">
                         <div class="div-row">
                             <div class="div-col-10">
-                                <h1>Hello, Brian &amp; Kelly Brown!!</h1>
                                 CM Project01 -- Login Page
                             </div>
                         </div>
