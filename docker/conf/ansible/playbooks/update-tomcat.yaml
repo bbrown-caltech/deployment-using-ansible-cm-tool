@@ -1,7 +1,19 @@
 ---
-- hosts: "{{target}}"
+- name: Update Tomcat Application
+  hosts: "{{ target }}"
+  user: caltech
   tasks:
-    - name: Update Tomcat Web App
-      ansible.builtin.script:
-        cmd: /playbooks/scripts/update_tomcat.sh "{{project}}" "{{url}}"
+    - name: Remove Application Files
+      command: sh -c 'sudo rm -rf /usr/share/tomcat/work/Catalina/localhost/{{ project }}'
 
+    - name: Stop Running Application
+      command: sh -c 'curl -u admin:admin http://localhost:8080/manager/text/stop?path=/{{ project }}'
+
+    - name: Remove Project Files
+      command: sh -c 'sudo rm -rf /usr/share/tomcat/webapps/{{ project }}'
+
+    - name: Download Updated War File
+      command: sh -c 'sudo wget -O /usr/share/tomcat/webapps/{{ project }}.war {{ url }}'
+
+    - name: Start Application
+      command: sh -c 'curl -u admin:admin http://localhost:8080/manager/text/start?path=/{{ project }}'

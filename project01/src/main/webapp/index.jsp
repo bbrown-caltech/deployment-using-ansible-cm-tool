@@ -287,7 +287,7 @@
                     <div class="div-col-10">
                         <div class="div-row">
                             <div class="div-col-10">
-                                CM Project01 -- Login Page - Update 01
+                                CM Project01 -- Login Page - Update 02
                             </div>
                         </div>
                         <div class="div-row">
