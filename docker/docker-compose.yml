@@ -110,6 +110,8 @@ services:
     restart: unless-stopped
     networks:
       - simplilearn
+    volumes:
+      - ./conf/ansible/playbooks:/playbooks
 
 ##########################################################################
 #  Application - Tomcat Server
