@@ -14,7 +14,7 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./conf/:/etc/nginx/:ro
+      - ./conf/:/etc/nginx/
       - ./certs:/etc/nginx/certs
 
 ##########################################################################
@@ -24,95 +24,113 @@ services:
   # Jenkins Nodes
   jenkins-master:
     container_name: jenkins-master
-    build: ./docker-files/Jenkins.Dockerfile
+    build:
+      context: .
+      dockerfile: ./docker-files/Jenkins.Dockerfile
     user: root
     restart: unless-stopped
     networks:
       - simplilearn
-    ports:
-      - "8081:8080"
     environment:
-      JENKINS_OPTS: "--prefix=/jenkins"
+      SNAPSHOT_URL: "http://nexus:8081/repository/maven-snapshots/"
+      RELEASE_URL: "http://nexus:8081/repository/maven-releases/"
+      GROUP_URL: "http://nexus:8081/repository/maven-group/"
     volumes:
       - jenkins_master_data:/var/jenkins_home:z
+      - /etc/docker:/etc/docker
+      - "/root/.docker:$HOME/.docker"
+      - /usr/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
       - ./conf/.ssh:/var/jenkins_home/.ssh
       - ./conf/.m2:/var/jenkins_home/.m2
 
   jenkins-node01:
     container_name: jenkins-node01
-    build: ./docker-files/Jenkins.Dockerfile
+    build:
+      context: .
+      dockerfile: ./docker-files/Jenkins.Dockerfile
     user: root
     restart: unless-stopped
     networks:
       - simplilearn
-    ports:
-      - "8082:8080"
     environment:
-      JENKINS_OPTS: "--prefix=/jenkins"
+      SNAPSHOT_URL: "http://nexus:8081/repository/maven-snapshots/"
+      RELEASE_URL: "http://nexus:8081/repository/maven-releases/"
+      GROUP_URL: "http://nexus:8081/repository/maven-group/"
     volumes:
       - jenkins_node01_data:/var/jenkins_home:z
+      - /etc/docker:/etc/docker
+      - "/root/.docker:$HOME/.docker"
+      - /usr/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
       - ./conf/.ssh:/var/jenkins_home/.ssh
       - ./conf/.m2:/var/jenkins_home/.m2
 
   jenkins-node02:
     container_name: jenkins-node02
-    build: ./docker-files/Jenkins.Dockerfile
+    build:
+      context: .
+      dockerfile: ./docker-files/Jenkins.Dockerfile
     user: root
     restart: unless-stopped
     networks:
       - simplilearn
-    ports:
-      - "8083:8080"
     environment:
-      JENKINS_OPTS: "--prefix=/jenkins"
+      SNAPSHOT_URL: "http://nexus:8081/repository/maven-snapshots/"
+      RELEASE_URL: "http://nexus:8081/repository/maven-releases/"
+      GROUP_URL: "http://nexus:8081/repository/maven-group/"
     volumes:
       - jenkins_node02_data:/var/jenkins_home:z
+      - /etc/docker:/etc/docker
+      - "/root/.docker:$HOME/.docker"
+      - /usr/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
       - ./conf/.ssh:/var/jenkins_home/.ssh
       - ./conf/.m2:/var/jenkins_home/.m2
 
   # Repository Manager
   nexus:
-    container_name: : nexus
+    container_name: nexus
     image: ${NEXUS}
     restart: unless-stopped
     networks:
       - simplilearn
-    ports:
-      - "8084:8081"
+    volumes:
+      - nexus_data:/nexus-data:z
 
 ##########################################################################
 #  CM Application(s) and Service(s)
 ##########################################################################
   ansible:
     container_name: ansible
-    build: ./docker-files/Ansible.Dockerfile
+    build:
+      context: .
+      dockerfile: ./docker-files/Ansible.Dockerfile
     user: root
     restart: unless-stopped
     networks:
       - simplilearn
-    ports:
-      - "8022:22"
+    volumes:
+      - ./conf/ansible/playbooks:/playbooks
 
 ##########################################################################
 #  Application - Tomcat Server
 ##########################################################################
   tomcat:
     container_name: tomcat
-    build: ./docker-files/Tomcat.Dockerfile
+    build:
+      context: .
+      dockerfile: ./docker-files/Tomcat.Dockerfile
     user: root
     restart: unless-stopped
     networks:
       - simplilearn
-    ports:
-      - "8085:8080"
 
 volumes:
   jenkins_master_data:
   jenkins_node01_data:
   jenkins_node02_data:
+  nexus_data:
 
 networks:
   simplilearn:

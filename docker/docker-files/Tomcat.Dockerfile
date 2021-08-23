@@ -23,12 +23,12 @@ RUN sudo apt-get update && apt-get install -y adoptopenjdk-8-hotspot
 RUN adduser --system --shell /bin/bash --gecos 'Tomcat Java Servlet and JSP engine' \
    --group --disabled-password --home /home/tomcat tomcat
 
-RUN wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz
-RUN tar xvzf ./apache-tomcat-8.5.69.tar.gz
-RUN rm -f apache-tomcat-8.5.69.tar.gz
+RUN wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.70/bin/apache-tomcat-8.5.70.tar.gz
+RUN tar xvzf ./apache-tomcat-8.5.70.tar.gz
+RUN rm -f apache-tomcat-8.5.70.tar.gz
 RUN rm -rf /usr/share/tomcat
-RUN mv /root/tmp/apache-tomcat-8.5.69 /usr/share/tomcat
-# RUN ln -s /usr/share/apache-tomcat-8.5.69 /usr/share/tomcat
+RUN mv /root/tmp/apache-tomcat-8.5.70 /usr/share/tomcat
+# RUN ln -s /usr/share/apache-tomcat-8.5.70 /usr/share/tomcat
 
 RUN chown -R tomcat:tomcat /usr/share/tomcat/*
 RUN chmod +x /usr/share/tomcat/bin/*.sh
